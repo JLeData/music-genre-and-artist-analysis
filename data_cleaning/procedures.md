@@ -163,41 +163,64 @@ RENAME COLUMN artistName TO artist_table_4;
 ### Clean Up Fields
 
 -- Delete fields irrelevant to analysis
+
 ALTER TABLE music-artist-411616.spotify.spotify_song_attributes
+
 DROP COLUMN energy;
+
 -- Testing to see if it runs
 
 ALTER TABLE music-artist-411616.spotify.spotify_song_attributes
+
 DROP COLUMN key,
+
 DROP COLUMN mode;
+
 -- Dropping multiple columns test - success
 
 -- Alter table statements to drop columns
+
 ALTER TABLE music-artist-411616.spotify.spotify_song_attributes
+
 DROP COLUMN msPlayed,
+
 DROP COLUMN danceability,
+
 DROP COLUMN loudness,
+
 DROP COLUMN speechiness,
+
 DROP COLUMN acousticness,
+
 DROP COLUMN instrumentalness,
+
 DROP COLUMN liveness,
+
 DROP COLUMN valence,
+
 DROP COLUMN tempo,
+
 DROP COLUMN type,
+
 DROP COLUMN id,
+
 DROP COLUMN uri,
+
 DROP COLUMN track_href,
+
 DROP COLUMN analysis_url,
+
 DROP COLUMN duration_ms,
+
 DROP COLUMN time_signature;
 
 -- Attempt at using BEGIN, ROLLBACK, COMMIT, but an error message occurred saying transaction statements are not supported.
 -- Alter table is a success, 3 columns remain: song_title, artist_table_4, and genre
-
 -- Due to using the free version of Big Query, there are limitations on updating data types.
-
 -- Example (not applicable due to limitations):
+
 UPDATE music-artist-411616.spotify.most_streamed_artists
+
 SET daily_streams = CEIL(daily_streams);
 
 -- This query would have been utilized to update the floats into whole numbers for the analysis, but there is a restriction in the free version.
@@ -205,7 +228,9 @@ SET daily_streams = CEIL(daily_streams);
 -- A syntax error appears saying changes to data type can affect the data
 
 -- Attempt to modify the data type (not applicable due to limitations):
+
 ALTER TABLE music-artist-411616.spotify.most_streamed_artists
+
 MODIFY daily_streams INTEGER;
 
 -- This query can modify the data type, but unable to do so using the free version.
@@ -214,14 +239,19 @@ MODIFY daily_streams INTEGER;
 
 
 -- Add two new columns to your table
+
 ALTER TABLE music-artist-411616.spotify.spotify_most_streamed
+
 ADD COLUMN artist_name_3 STRING,
+
 ADD COLUMN song_title STRING;
 
 -- Unable to update columns due to free trial limitation
 -- This query would be able to separate artist from song title in spotify_most_streamed
 -- Update the new columns by splitting the existing column
+
 UPDATE music-artist-411616.spotify.spotify_most_streamed
+
 SET
   artist_name_3 = SPLIT(artist_and_title, ' - ')[OFFSET(0)],
   song_title = SPLIT(artist_and_title, ' - ')[OFFSET(1)];
@@ -231,6 +261,7 @@ NOTE:
 - data available in other tables and unable to split fields due to limitations of free trial access.
 
 -- Remove spotify_most_streamed
+
 DROP TABLE music-artist-411616.spotify.spotify_most_streamed
 
 - Keep information in readme to show limitations on project and direction it has taken
@@ -240,17 +271,28 @@ DROP TABLE music-artist-411616.spotify.spotify_most_streamed
 ### Table creation
 
 1. Popular Genre Analysis
+
 -- Create a new table for popular genre analysis by taking fields
 -- artist_name, genre, streams_by_artist, song_title
+
 CREATE TABLE music-artist-411616.combined.popular_genre_analysis AS
+
 SELECT DISTINCT artist_table_2,
+
        genre,
+       
        streams_by_artist,
+       
        song_title
+       
 FROM music-artist-411616.spotify.most_streamed_artists AS two
+
 JOIN music-artist-411616.spotify.spotify_song_attributes AS four
+
 ON two.artist_table_2 = four.artist_table_4
+
 JOIN music-artist-411616.spotify.monthly_listeners AS one
+
 ON four.artist_table_4 = one.artist_table_1;
 
 note: created separate file location to save combined fields
