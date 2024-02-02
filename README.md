@@ -77,7 +77,9 @@ Answer key questions:
 
 - Who is the most popular artist?
 
-- What is the upcoming popular genre and artists?
+- Is there any correlation between the two?
+
+- How about other artists and gnres?
 
 ## Data Analysis
 
