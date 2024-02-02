@@ -1,4 +1,4 @@
-# Music-Genre-and-Artist-Analysis# Music Analysis Project
+# Music-Genre-and-Artist-Analysis
 
 ## Table of Contents
 
