@@ -28,7 +28,7 @@ This project aims to analyze several music dataset provided by Kaggle, focusing 
    - look into different amount of sub genres that exist within the dataset.
    
 2. Artist Popularity Assessment:
-   -Assess the popularity and influence of individual artists within the Spotify ecosystem by analyzing metrics such as listeners, fan count, daily streams, and other relevant data.
+   - Assess the popularity and influence of individual artists within the Spotify ecosystem by analyzing metrics such as listeners, fan count, daily streams, and other relevant data.
      
 3. Correlation between Artist and Genre Popularity:
    - Investigate whether there is a correlation between artist popularity and the popularity of the genres they belong to.
