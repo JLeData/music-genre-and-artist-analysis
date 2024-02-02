@@ -226,7 +226,7 @@ NOTE:
 DROP TABLE music-artist-411616.spotify.spotify_most_streamed
 ```
 
--- Keep information in readme to show limitations on project and direction it has taken
+Keep information in readme to show limitations on project and direction it has taken
 
 ## Step 5: Create tables for cleaning null values
 
@@ -524,6 +524,7 @@ ALTER TABLE music-artist-411616.combined.emerging_genre
 RENAME TO genre_assessment
 -- renamed table
 ```
+Not all fields were utilized in the end, datasets picked are sufficient for analysis
 
 ### Data cleaning done and ready for analysis
 
