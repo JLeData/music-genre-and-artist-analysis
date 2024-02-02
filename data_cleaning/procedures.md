@@ -174,55 +174,47 @@ DROP COLUMN analysis_url,
 DROP COLUMN duration_ms,
 DROP COLUMN time_signature;
 ```
+Attempt at using BEGIN, ROLLBACK, COMMIT, but an error message occurred saying transaction statements are not supported.
 
--- Attempt at using BEGIN, ROLLBACK, COMMIT, but an error message occurred saying transaction statements are not supported.
+Alter table is a success, 3 columns remain: song_title, artist_table_4, and genre.
 
--- Alter table is a success, 3 columns remain: song_title, artist_table_4, and genre.
-
--- Due to using the free version of Big Query, there are limitations on updating data types.
-
--- Example (not applicable due to limitations):
-
+```
 ```sql
+-- Due to using the free version of Big Query, there are limitations on updating data types.
+-- Example (not applicable due to limitations):
 UPDATE music-artist-411616.spotify.most_streamed_artists
 SET daily_streams = CEIL(daily_streams);
 ```
+This query would have been utilized to update the floats into whole numbers for the analysis, but there is a restriction in the free version.
 
--- This query would have been utilized to update the floats into whole numbers for the analysis, but there is a restriction in the free version.
+Changing data types is not allowed as well to make it consistent with the other fields.
 
--- Changing data types is not allowed as well to make it consistent with the other fields.
+A syntax error appears saying changes to data type can affect the data.
 
--- A syntax error appears saying changes to data type can affect the data.
-
--- Attempt to modify the data type (not applicable due to limitations):
+ Attempt to modify the data type (not applicable due to limitations):
 
 ```sql
 ALTER TABLE music-artist-411616.spotify.most_streamed_artists
 MODIFY daily_streams INTEGER;
 ```
 
--- This query can modify the data type, but unable to do so using the free version.
+This query can modify the data type, but unable to do so using the free version.
 
--- I will set limitations on this table, knowing that there are decimal values while looking at the results of the analysis.
+I will set limitations on this table, knowing that there are decimal values while looking at the results of the analysis.
 
--- It does not make much sense that it is not whole numbers as these are average results of these fields, but that will be taken into account.
-
-
--- Add two new columns to your table
-
+It does not make much sense that it is not whole numbers as these are average results of these fields, but that will be taken into account.
 ```sql
+-- Add two new columns to your table
 ALTER TABLE music-artist-411616.spotify.spotify_most_streamed
 ADD COLUMN artist_name_3 STRING,
 ADD COLUMN song_title STRING;
 ```
 
--- Unable to update columns due to free trial limitation.
+Unable to update columns due to free trial limitation.
 
--- This query would be able to separate artist from song title in spotify_most_streamed.
-
--- Update the new columns by splitting the existing column.
-
+This query would be able to separate artist from song title in spotify_most_streamed.
 ```sql
+-- Update the new columns by splitting the existing column.
 UPDATE music-artist-411616.spotify.spotify_most_streamed
 SET
   artist_name_3 = SPLIT(artist_and_title, ' - ')[OFFSET(0)],
@@ -233,9 +225,8 @@ NOTE:
 - plan on removal of spotify_most_streamed.csv
 - data available in other tables and unable to split fields due to limitations of free trial access.
 
--- Remove spotify_most_streamed
-
 ```sql
+-- Remove spotify_most_streamed
 DROP TABLE music-artist-411616.spotify.spotify_most_streamed
 ```
 
