@@ -425,7 +425,7 @@ WHERE genre IN ('pop','dance pop')
 
 success
 
-move on to the rest, list provided [here]
+move on to the rest, list provided [here](https://github.com/JLeData/music-genre-and-artist-analysis/blob/main/data_cleaning/genre_classification.txt)
 
 ```sql
 -- update pop
