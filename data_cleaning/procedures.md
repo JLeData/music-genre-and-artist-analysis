@@ -136,7 +136,7 @@ RENAME COLUMN artistName TO artist_table_4;
 
 ### Clean Up Fields
 
--- Delete fields irrelevant to analysis
+Delete fields irrelevant to analysis
 
 ```sql
 ALTER TABLE music-artist-411616.spotify.spotify_song_attributes
@@ -249,7 +249,8 @@ JOIN music-artist-411616.spotify.monthly_listeners AS one
 ON four.artist_table_4 = one.artist_table_1;
 ```
 
-note: created separate file location to save combined fields
+NOTE: 
+- created separate file location to save combined fields
 
 2. Artist Popularity Assessment
 
@@ -284,7 +285,7 @@ JOIN music-artist-411616.spotify.monthly_listeners AS one
 ON four.artist_table_4 = one.artist_table_1;
 ```
 
-note: 
+NOTE: 
 
 - remade tables using DISTINCT to delete any duplicates
 - limitations: using the query above as an inner join means that null values from the different tables that do not match will not appear. since the data are from spotify but uploaded by different users, take into consideration that some artist did not appear on the tables.
@@ -304,7 +305,7 @@ OR daily_trend IS NULL
 OR streams_by_artist IS NULL;
 ```
 
--- 1 artist with daily_streams as null
+1 artist with daily_streams as null
 
 ```sql
 -- emerging_genre table
@@ -328,7 +329,7 @@ OR streams_by_artist IS NULL
 OR song_title IS NULL
 OR genre IS NULL;
 ```
-notes:
+NOTE:
 - 80 null values under genre.
 
 - Addressing null values in genre.
@@ -397,7 +398,7 @@ Updated all null values
 
 ## Step 7: Inserting new fields
 
-Note:
+NOTE:
 
 - Creating new fields to classify sub genres into generic genres.
   
@@ -507,7 +508,7 @@ UPDATE `music-artist-411616.combined.emerging_genre`
 SET classification = 'other'
 WHERE genre IN ('escape room','broadway','movie tunes','weirdcore','chutney');
 ```
-Note:
+NOTE:
 
 - go back and adjust null values.
 
@@ -523,8 +524,6 @@ ALTER TABLE music-artist-411616.combined.emerging_genre
 RENAME TO genre_assessment
 -- renamed table
 ```
-
-
 
 ### Data cleaning done and ready for analysis
 
