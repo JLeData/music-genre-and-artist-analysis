@@ -74,12 +74,19 @@ RENAME COLUMN Listeners TO listener_fans;
 --
 
 ALTER TABLE music-artist-411616.spotify.monthly_listeners
+
 RENAME COLUMN Daily_Trend TO daily_trend;
 
-ALTER TABLE music-artist-411616.spotify.monthly_listeners
-RENAME COLUMN PEAK TO peak;
+--
 
 ALTER TABLE music-artist-411616.spotify.monthly_listeners
+
+RENAME COLUMN PEAK TO peak;
+
+--
+
+ALTER TABLE music-artist-411616.spotify.monthly_listeners
+
 RENAME COLUMN PkListeners to peak_listeners;
 
 -- Rename columns for most_streamed_artist
