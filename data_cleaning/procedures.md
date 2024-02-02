@@ -9,7 +9,7 @@
 3. [spotify_most_streamed.csv](https://github.com/JLeData/music-genre-and-artist-analysis/blob/main/datasets/spotify_most_streamed.csv)
 4. [spotify_song_attributes.csv](https://github.com/JLeData/music-genre-and-artist-analysis/blob/main/datasets/spotify_song_attributes.csv)
 
--- Section 2: Data Cleaning and Preparation
+## Section 2: Data Cleaning and Preparation
 
 ### Step 1: Explore the Data
 - Examine the structure and contents of the dataset.
@@ -60,6 +60,7 @@
 - Renaming tables to lowercase for consistent and oranized structure:
 
 -- Rename columns for monthly_listerners
+
 ALTER TABLE music-artist-411616.spotify.monthly_listeners
 RENAME COLUMN artist_ref TO artist_table_1;
 
