@@ -64,6 +64,7 @@
 ALTER TABLE music-artist-411616.spotify.monthly_listeners
 RENAME COLUMN artist_ref TO artist_table_1;
 
+
 ALTER TABLE music-artist-411616.spotify.monthly_listeners
 RENAME COLUMN Listeners TO listener_fans;
 
