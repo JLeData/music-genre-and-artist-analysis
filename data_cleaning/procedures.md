@@ -13,7 +13,7 @@
 
 ### Step 1: Explore the Data
 
-####Examine the structure and contents of the dataset.
+#### Examine the structure and contents of the dataset.
 
 ### Step 2: Handling Fields
 
