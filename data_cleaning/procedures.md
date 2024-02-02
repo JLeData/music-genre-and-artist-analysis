@@ -58,7 +58,7 @@
 - dataset is similar to most_streamed_artist, spotify_song_attributes
 
 ## Step 3: Change Column Names
-- Renaming tables to lowercase for consistent and oranized structure:
+Renaming tables to lowercase for consistent and oranized structure:
   
 ```sql
 -- Rename columns for monthly_listerners
