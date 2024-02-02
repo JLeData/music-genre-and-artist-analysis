@@ -1,11 +1,13 @@
--- Data Cleaning Steps Documentation
+# Data Cleaning Steps Documentation
 
--- Section 1: Uploading .csv Files
--- Upload to Google Cloud Big Query
-[monthly_listeners.csv](https://github.com/JLeData/music-genre-and-artist-analysis/blob/main/datasets/monthly_listeners.csv)
-[most_streamed_artist.csv](https://github.com/JLeData/music-genre-and-artist-analysis/blob/main/datasets/most_streamed_artists.csv)
-[spotify_most_streamed.csv](https://github.com/JLeData/music-genre-and-artist-analysis/blob/main/datasets/spotify_most_streamed.csv)
-[spotify_song_attributes.csv](https://github.com/JLeData/music-genre-and-artist-analysis/blob/main/datasets/spotify_song_attributes.csv)
+## Section 1: Uploading .csv Files
+
+### Upload to Google Cloud Big Query
+
+1. [monthly_listeners.csv](https://github.com/JLeData/music-genre-and-artist-analysis/blob/main/datasets/monthly_listeners.csv)
+2. [most_streamed_artist.csv](https://github.com/JLeData/music-genre-and-artist-analysis/blob/main/datasets/most_streamed_artists.csv)
+3. [spotify_most_streamed.csv](https://github.com/JLeData/music-genre-and-artist-analysis/blob/main/datasets/spotify_most_streamed.csv)
+4. [spotify_song_attributes.csv](https://github.com/JLeData/music-genre-and-artist-analysis/blob/main/datasets/spotify_song_attributes.csv)
 
 -- Section 2: Data Cleaning and Preparation
 
