@@ -65,7 +65,6 @@
 ALTER TABLE music-artist-411616.spotify.monthly_listeners
 RENAME COLUMN artist_ref TO artist_table_1;
 ```
-
 ```sql
 ALTER TABLE music-artist-411616.spotify.monthly_listeners
 RENAME COLUMN Listeners TO listener_fans;
@@ -82,9 +81,8 @@ RENAME COLUMN PEAK TO peak;
 ALTER TABLE music-artist-411616.spotify.monthly_listeners
 RENAME COLUMN PkListeners to peak_listeners;
 ```
--- Rename columns for most_streamed_artist
-
 ```sql
+-- Rename columns for most_streamed_artist
 ALTER TABLE music-artist-411616.spotify.most_streamed_artists
 RENAME COLUMN Artist TO artist_table_2;
 ```
@@ -107,10 +105,9 @@ RENAME COLUMN Solo TO solo_projects;
 ```sql
 ALTER TABLE music-artist-411616.spotify.most_streamed_artists
 RENAME COLUMN As_feature TO featured_guest;
--- Rename columns for spotify_most_streamed
 ```
-
 ```sql
+-- Rename columns for spotify_most_streamed
 ALTER TABLE music-artist-411616.spotify.spotify_most_streamed
 RENAME COLUMN Artist_and_Title TO artist_table3_song_title;
 --note: rename the field for now but plans on separating into their own columns
@@ -119,19 +116,15 @@ RENAME COLUMN Artist_and_Title TO artist_table3_song_title;
 ```sql
 ALTER TABLE music-artist-411616.spotify.spotify_most_streamed
 RENAME COLUMN Streams TO stream_song;
-```
 --note: chose this naming convention since there are other fields that has stream in it as well, but this one is based on the song played.
-
+```
 ```sql
 ALTER TABLE music-artist-411616.spotify.spotify_most_streamed
 RENAME COLUMN Daily TO daily_song;
-```
-
 --note: same situation as stream_song
-
--- Rename columns for spotify_song_attributes
-
+```
 ```sql
+-- Rename columns for spotify_song_attributes
 ALTER TABLE music-artist-411616.spotify.spotify_song_attributes
 RENAME COLUMN trackName TO song_title;
 ```
