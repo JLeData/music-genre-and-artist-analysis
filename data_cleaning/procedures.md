@@ -141,21 +141,17 @@ RENAME COLUMN artistName TO artist_table_4;
 ```sql
 ALTER TABLE music-artist-411616.spotify.spotify_song_attributes
 DROP COLUMN energy;
-```
-
 -- Testing to see if it runs
-
+```
 ```sql
 ALTER TABLE music-artist-411616.spotify.spotify_song_attributes
 DROP COLUMN key,
 DROP COLUMN mode;
 ```
-
--- Dropping multiple columns test - success
-
--- Alter table statements to drop columns
+Dropping multiple columns test - success
 
 ```sql
+-- Alter table statements to drop columns
 ALTER TABLE music-artist-411616.spotify.spotify_song_attributes
 DROP COLUMN msPlayed,
 DROP COLUMN danceability,
@@ -178,7 +174,6 @@ Attempt at using BEGIN, ROLLBACK, COMMIT, but an error message occurred saying t
 
 Alter table is a success, 3 columns remain: song_title, artist_table_4, and genre.
 
-```
 ```sql
 -- Due to using the free version of Big Query, there are limitations on updating data types.
 -- Example (not applicable due to limitations):
@@ -191,7 +186,7 @@ Changing data types is not allowed as well to make it consistent with the other 
 
 A syntax error appears saying changes to data type can affect the data.
 
- Attempt to modify the data type (not applicable due to limitations):
+Attempt to modify the data type (not applicable due to limitations):
 
 ```sql
 ALTER TABLE music-artist-411616.spotify.most_streamed_artists
@@ -203,6 +198,7 @@ This query can modify the data type, but unable to do so using the free version.
 I will set limitations on this table, knowing that there are decimal values while looking at the results of the analysis.
 
 It does not make much sense that it is not whole numbers as these are average results of these fields, but that will be taken into account.
+
 ```sql
 -- Add two new columns to your table
 ALTER TABLE music-artist-411616.spotify.spotify_most_streamed
@@ -238,10 +234,9 @@ DROP TABLE music-artist-411616.spotify.spotify_most_streamed
 
 1. Popular Genre Analysis
 
+```sql
 -- Create a new table for popular genre analysis by taking fields
 -- artist_name, genre, streams_by_artist, song_title
-
-```sql
 CREATE TABLE music-artist-411616.combined.popular_genre_analysis AS
 SELECT DISTINCT artist_table_2,
        genre,
@@ -298,11 +293,9 @@ note:
 
 ### Addressing the null values
 
--- look for amount of null values within each field
-
--- checking artist_popularity_asessment table
-
 ```sql
+-- look for amount of null values within each field
+-- checking artist_popularity_asessment table
 SELECT *
 FROM music-artist-411616.combined.artist_popularity_assessment
 WHERE listener_fans IS NULL
@@ -313,9 +306,8 @@ OR streams_by_artist IS NULL;
 
 -- 1 artist with daily_streams as null
 
--- emerging_genre table
-
 ```sql
+-- emerging_genre table
 SELECT *
 FROM music-artist-411616.combined.emerging_genre
 WHERE artist_table_1 IS NULL
@@ -324,11 +316,11 @@ OR daily_trend IS NULL
 OR song_title IS NULL
 OR genre IS NULL;
 ```
--- 80 null values under genre.
 
--- Popular_genre_analysis table
+80 null values under genre.
 
 ```sql
+-- Popular_genre_analysis table
 SELECT *
 FROM music-artist-411616.combined.popular_genre_analysis
 WHERE artist_table_2 IS NULL
@@ -336,32 +328,31 @@ OR streams_by_artist IS NULL
 OR song_title IS NULL
 OR genre IS NULL;
 ```
+notes:
+- 80 null values under genre.
 
--- 80 null values under genre
+- Addressing null values in genre.
 
--- addressing null values in genre
+- The plan to fill these null is to look up the songs on spotify and look at genres.
 
--- the plan to fill these null is to look up the songs on spotify and look at genres
+- Find artist in existing table and match genre to others.
 
--- find artist in existing table and match genre to others
+- limitations maybe that song potentially is not the same genre and be a mix of genres.
 
--- limitations maybe that song potentially is not the same genre and be a mix of genres
+- Utilize website https://everynoise.com/ to find artist genre and replace null values.
 
--- Utilize website https://everynoise.com/ to find artist genre and replace null values
-
-NOTE: Switch to Billing mode to access tools for Google Big Query since changing null values requires it for this project.
-
--- example of existing artist
+- Switch to Billing mode to access tools for Google Big Query since changing null values requires it for this project.
 
 ```sql
+-- example of existing artist
 UPDATE music-artist-411616.combined.emerging_genre
 SET genre = 'chillwave'
 WHERE artist_table_1 = 'ODESZA';
 ```
 
--- revise popular_genre_analysis as well
+revise popular_genre_analysis as well
 
--- majority of nulls will be updated the same so all will not be posted
+majority of nulls will be updated the same so all will not be posted
 
 ```sql
 UPDATE music-artist-411616.combined.popular_genre_analysis
@@ -372,25 +363,22 @@ WHERE artist_table_2 = 'Cheat Codes';
 UPDATE music-artist-411616.combined.emerging_genre
 SET genre = 'edm'
 WHERE artist_table_1 = 'Cheat Codes';
-```
-
 -- setup to check for artist exist in table and rename genre
+```
 
 ```sql
 select *
 from music-artist-411616.combined.popular_genre_analysis
 where genre is null;
-```
-
 -- look for null values and artist
+```
 
 ```sql
 select *
 from music-artist-411616.combined.popular_genre_analysis
 where artist_table_2 = INSERT ARTIST NAME
-```
-
 -- check for artist if they have multiple songs and same genre
+```
 
 ```sql
 UPDATE music-artist-411616.combined.popular_genre_analysis
@@ -403,46 +391,43 @@ SET genre = INSERT GENRE NAME
 WHERE artist_table_1 = INSERT ARTIST NAME
 ```
 
--- change both tables since they both contain genre
+Change both tables since they both contain genre
 
--- updated all null values
+Updated all null values
 
 ## Step 7: Inserting new fields
 
--- Creating new fields to classify sub genres into generic genres.
+Note:
 
--- used chatgpt to help classify each sub genre.
+- Creating new fields to classify sub genres into generic genres.
+  
+- used chatgpt to help classify each sub genre.
 
--- limitation: trusting chatgpt to classify each subgenre to the best of its abilities.
+- limitation: trusting chatgpt to classify each subgenre to the best of its abilities.
 
--- provided information to chatgpt and the general genres to classify.
+- provided information to chatgpt and the general genres to classify.
 
--- if it does not fall into those categories, it will go into other.
-
--- create new field
+- if it does not fall into those categories, it will go into other.
 
 ```sql
+-- create new field
 ALTER TABLE `music-artist-411616.combined.emerging_genre`
 ADD COLUMN classification STRING;
 ```
-
--- update classification to generic genres
-
--- first test
-
 ```sql
+-- update classification to generic genres
+-- first test
 UPDATE `music-artist-411616.combined.emerging_genre`
 SET classification = 'pop'
 WHERE genre IN ('pop','dance pop')
 ```
 
--- success
+success
 
--- move on to the rest, list provided [here]
-
--- update pop
+move on to the rest, list provided [here]
 
 ```sql
+-- update pop
 UPDATE `music-artist-411616.combined.emerging_genre`
 SET classification = 'pop'
 WHERE genre IN ('baroque pop','canadian pop','bedroom pop','folk-pop','australian pop',
@@ -453,15 +438,14 @@ WHERE genre IN ('baroque pop','canadian pop','bedroom pop','folk-pop','australia
         'bubblegum pop','bollywood','hawaiian','girl group','new wave pop')
 ```
 
--- will look back to see if any null values exist and re apply query.
+will look back to see if any null values exist and re apply query.
 
--- due to naming convention on chatgpt, some names are off and will have to be re-examined.
+due to naming convention on chatgpt, some names are off and will have to be re-examined.
 
--- will change the broader classifications and go back for the smaller ones.
-
--- update rock
+will change the broader classifications and go back for the smaller ones.
 
 ```sql
+-- update rock
 UPDATE `music-artist-411616.combined.emerging_genre`
 SET classification = 'rock'
 WHERE genre IN ('alt z','alternative metal','modern alternative rock','modern rock',
@@ -470,10 +454,8 @@ WHERE genre IN ('alt z','alternative metal','modern alternative rock','modern ro
       'plugg','lilith','new wave pop','dance rock','celectic rock','classsical rock',
       'british indie rock','melbourne bounce international','hard rock');
 ```
-
--- update edm
-
 ```sql
+-- update edm
 UPDATE `music-artist-411616.combined.emerging_genre`
 SET classification = 'edm'
 WHERE genre IN ('brostep','electropop','indietronica','electro house','australian dance',
@@ -482,10 +464,8 @@ WHERE genre IN ('brostep','electropop','indietronica','electro house','australia
       'melbourne bounce international','electronic','minimal tech house','belgian edm',
       'nordic house','big room')
 ```
-
--- update hip-hop/rap
-
 ```sql
+-- update hip-hop/rap
 UPDATE `music-artist-411616.combined.emerging_genre`
 SET classification = 'hip-hop/rap'
 WHERE genre IN ('chicago rap','emo rap','melodic rap','hip hop','pop rap','atl hip hop',
@@ -496,66 +476,55 @@ WHERE genre IN ('chicago rap','emo rap','melodic rap','hip hop','pop rap','atl h
       'melodic drill','memphis hip hop','aesthetic rap','hawaiian hip hop',
       'phonk brasileiro','indie pop rap','pluggnb');
 ```
-
---update r&b/soul
-
 ```sql
+--update r&b/soul
 UPDATE `music-artist-411616.combined.emerging_genre`
 SET classification = 'r&b/soul'
 WHERE genre IN ('bedroom soul','canadian contemporary r&b','r&b','alternative r&b',
       'chill r&b','indonesian r&b','neo soul','british soul','soul jazz');
 ```
-
--- update classical
-
 ```sql
+-- update classical
 UPDATE `music-artist-411616.combined.emerging_genre`
 SET classification = 'classical'
 WHERE genre IN ('classical','art pop','british orchestra');
 ```
-
--- update lo-fi/chill
-
 ```sql
+-- update lo-fi/chill
 UPDATE `music-artist-411616.combined.emerging_genre`
 SET classification = 'lo-fi/chill'
 WHERE genre IN ('sad lo-fi','lo-fi chill','ambient worship');
 ```
-
--- update anime
-
 ```sql
+-- update anime
 UPDATE `music-artist-411616.combined.emerging_genre`
 SET classification = 'anime'
 WHERE genre IN ('pov: indie','anime','otacore');
 ```
-
---update other
-
 ```sql
+--update other
 UPDATE `music-artist-411616.combined.emerging_genre`
 SET classification = 'other'
 WHERE genre IN ('escape room','broadway','movie tunes','weirdcore','chutney');
 ```
+Note:
 
--- go back and adjust null values.
+- go back and adjust null values.
 
--- readjusted classifcations and null values.
+- readjusted classifcations and null values.
 
--- used chatgpt to help reclassify subgenres.
+- used chatgpt to help reclassify subgenres.
 
--- genres are:
-
--- pop, rock, hip-hop/rap, film score, edm, metal, indie, classical, r&b/soul,other, country, jazz/blues. 
-
--- decided to delete popular_genre_analysis as emerging genre contains enough data to use
+- genres are: pop, rock, hip-hop/rap, film score, edm, metal, indie, classical, r&b/soul,other, country, jazz/blues. 
 
 ```sql
+-- decided to delete popular_genre_analysis as emerging genre contains enough data to use
 ALTER TABLE music-artist-411616.combined.emerging_genre
 RENAME TO genre_assessment
+-- renamed table
 ```
 
--- renamed table
+
 
 ### Data cleaning done and ready for analysis
 
