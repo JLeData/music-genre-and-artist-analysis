@@ -59,10 +59,9 @@
 
 ## Step 3: Change Column Names
 - Renaming tables to lowercase for consistent and oranized structure:
-
--- Rename columns for monthly_listerners
-
+  
 ```sql
+-- Rename columns for monthly_listerners
 ALTER TABLE music-artist-411616.spotify.monthly_listeners
 RENAME COLUMN artist_ref TO artist_table_1;
 ```
@@ -108,14 +107,14 @@ RENAME COLUMN Solo TO solo_projects;
 ```sql
 ALTER TABLE music-artist-411616.spotify.most_streamed_artists
 RENAME COLUMN As_feature TO featured_guest;
-```
 -- Rename columns for spotify_most_streamed
+```
 
 ```sql
 ALTER TABLE music-artist-411616.spotify.spotify_most_streamed
 RENAME COLUMN Artist_and_Title TO artist_table3_song_title;
-```
 --note: rename the field for now but plans on separating into their own columns
+```
 
 ```sql
 ALTER TABLE music-artist-411616.spotify.spotify_most_streamed
