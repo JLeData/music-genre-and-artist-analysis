@@ -69,6 +69,8 @@ Perform the following tasks:
 
 4. Data cleaning and formatting
 
+Cleaning log can be found (here)[https://github.com/JLeData/music-genre-and-artist-analysis/blob/main/data_cleaning/procedures.md]
+
 ## Exploratory Data Analysis
 
 Answer key questions:
