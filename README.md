@@ -49,7 +49,7 @@ The project utilizes multiple datasets related to the Spotify app, encompassing 
 
 ## Tools
 - Excel: Retrieve data
-     - [Files here]()
+     - [Files here](https://github.com/JLeData/music-genre-and-artist-analysis/tree/main/datasets)
        
 - SQL: Data cleaning
      - Google Cloud BigQuery
