@@ -528,4 +528,28 @@ Not all fields were utilized in the end, datasets picked are sufficient for anal
 
 ### Data cleaning done and ready for analysis
 
+## NEW
+
+Added another sql document for the purpose of creating visuals
+
+```sql
+-- This is to better create visuals for the average user listeners per classification/genre
+CREATE TABLE music-artist-411616.combined.genre_artist_assessment AS
+SELECT DISTINCT three.artist_table_1,
+       three.listener_fans,
+       daily_streams,
+       three.daily_trend,
+       streams_by_artist,
+       peak,
+       peak_listeners,
+       three.genre,
+       three.classification
+FROM music-artist-411616.spotify.most_streamed_artists AS two
+JOIN music-artist-411616.spotify.spotify_song_attributes AS four
+ON two.artist_table_2 = four.artist_table_4
+JOIN music-artist-411616.spotify.monthly_listeners AS one
+ON four.artist_table_4 = one.artist_table_1
+JOIN music-artist-411616.combined.genre_assessment AS three
+ON one.artist_table_1 = three.artist_table_1;
+```
 
