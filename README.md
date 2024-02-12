@@ -90,7 +90,13 @@ Present links to Tablea Public and screenshots of data visualizations in this se
 
 ![Genre Analysis](https://github.com/JLeData/music-genre-and-artist-analysis/blob/main/visuals/Genre%20and%20Song%20Distribution.png)
 
-This is an interactable dashboard. Click [here](https://public.tableau.com/app/profile/jordan.le6101/viz/artistgenreanalysis/GenreandSongDistribution) to interact with it.
+This is an interactable dashboard. [Click here to interact with it.](https://public.tableau.com/app/profile/jordan.le6101/viz/artistgenreanalysis/GenreandSongDistribution)
+
+### Top Artists by Spotify Listeners
+
+[Top Artist](https://github.com/JLeData/music-genre-and-artist-analysis/blob/main/visuals/Artist%20Bar%20Chart.png)
+
+[Link to visual.](https://public.tableau.com/app/profile/jordan.le6101/viz/artist_assessment/Sheet1)
 
 ## Results and Findings
 
