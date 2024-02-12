@@ -112,12 +112,13 @@ In progress
 
 These were some limitations when approaching this project:
 
-1. Data is not up to date.
+1. Data is not current.
   - Information used is provided by Kaggle and has been updated in November of 2023.
   - Potential new artist and new songs after the dataset had been provided is not within the dataset.
+  - Trend and listener count has much room for change over time.
 
 2. Data does not have primary keys.
-  - Data provided is from Spotify, but connecting the data relies on the artist within it.
+  - Data provided is from Spotify, but connecting the data relies on the artist within it as the datasets are separate from each other.
   - The data is not 1:1, some values will not be matched with others which will result not being in the dataset.
   - Null values will exist and have to be fixed.
 
