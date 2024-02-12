@@ -88,7 +88,7 @@ Present links to Tablea Public and screenshots of data visualizations in this se
 
 ### Genre Popularity Assessment
 
-[Genre Analysis}(https://github.com/JLeData/music-genre-and-artist-analysis/blob/main/visuals/Genre%20and%20Song%20Distribution.png)
+[Genre Analysis](https://github.com/JLeData/music-genre-and-artist-analysis/blob/main/visuals/Genre%20and%20Song%20Distribution.png)
 
 ## Results and Findings
 
