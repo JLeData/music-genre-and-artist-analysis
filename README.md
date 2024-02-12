@@ -10,7 +10,6 @@
 - [Exploratory Data Analysis](#exploratory-data-analysis)
 - [Data Analysis](#data-analysis)
 - [Results and Findings](#results-and-findings)
-- [Recommendations](#recommendations)
 - [Limitations](#limitations)
 - [References](#references)
 - [Personal Goals](#personal-goals)
@@ -89,6 +88,7 @@ Present links to Tablea Public and screenshots of data visualizations in this se
 
 ### Genre Popularity Assessment
 
+[Genre Analysis}(https://github.com/JLeData/music-genre-and-artist-analysis/blob/main/visuals/Genre%20and%20Song%20Distribution.png)
 
 ## Results and Findings
 
