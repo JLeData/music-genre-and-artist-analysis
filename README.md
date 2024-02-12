@@ -22,16 +22,14 @@ This project aims to analyze several music dataset provided by Kaggle, focusing 
 ## Objectives
 
 
-1. Popular Genre Analysis:
-   - Identify the top Spotify genre based on provided dataset.
-   - Compare the popularity and trends of different genres within the dataset.
-   - look into different amount of sub genres that exist within the dataset.
-   
+1. Genre Popularity Analysis:
+   - Analyze music genre popularity on Spotify using Kaggle data. Determine the most popular genre by total listeners and explore genre diversity.
+
 2. Artist Popularity Assessment:
-   - Assess the popularity and influence of individual artists within the Spotify ecosystem by analyzing metrics such as listeners, fan count, daily streams, and other relevant data.
-     
-3. Correlation between Artist and Genre Popularity:
-   - Investigate whether there is a correlation between artist popularity and the popularity of the genres they belong to.
+   - Assess top 25 artist popularity on Spotify with Kaggle data. Analyze metrics like total listeners and daily streams.
+
+3.Top Trending Artists:
+   - Identify trending Spotify artists from Kaggle data. Explore overlap with top 25 artists, assessing potential for continued rise.
 
 ## Data Source
 
@@ -74,23 +72,25 @@ Cleaning log can be found [here.](https://github.com/JLeData/music-genre-and-art
 
 Answer key questions:
 
-- What is the most popular genre?
+1. What is the most popular genre?
 
-- Who is the most popular artist?
+2. Who is the most popular artist?
 
-- Is there any correlation between the two?
+3. Is there any correlation between the two?
 
-- How about other artists and gnres?
+4. Who are the top 5 potential upcoming artist not in the top 25?
+
 
 ## Data Analysis
 
-In progress
+Visual created for data analysis
+
+Present links to Tablea Public and screenshots of data visualizations in this section.
+
+### Genre Popularity Assessment
+
 
 ## Results and Findings
-
-In progress
-
-## Recommendations
 
 In progress
 
