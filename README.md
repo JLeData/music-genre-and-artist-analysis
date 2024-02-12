@@ -98,6 +98,12 @@ This is an interactable dashboard. [Click here to interact with it.](https://pub
 
 [Link to visual.](https://public.tableau.com/app/profile/jordan.le6101/viz/artist_assessment/Sheet1)
 
+### Top Trending Artists
+
+![Top Trending](https://github.com/JLeData/music-genre-and-artist-analysis/blob/main/visuals/Trending%20Artists.png)
+
+[Link to visual.](https://public.tableau.com/app/profile/jordan.le6101/viz/ArtistsbyTrending/TrendingArtists)
+
 ## Results and Findings
 
 In progress
