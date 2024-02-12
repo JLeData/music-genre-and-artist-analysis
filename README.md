@@ -16,7 +16,7 @@
 
 ## Project Overview
 
-This project aims to analyze several music dataset provided by Kaggle, focusing on Spotify listeners' preferences. By examining genre and artist popularity, the project seeks to uncover insights into how these factors influence overall music consumption trends within the platform. Through this analysis, the project aims to identify emerging trends and patterns in the music industry.
+This project delves into the analysis of multiple music datasets sourced from Kaggle, focusing on understanding Spotify listeners' preferences. The primary goal is to uncover insights into genre and artist popularity dynamics and their impact on overall music consumption trends within the platform. By conducting thorough analyses, the project aims to shed light on emerging patterns and trends within the music industry.
 
 ## Objectives
 
@@ -110,7 +110,18 @@ In progress
 
 ## Limitations
 
-In progress
+These were some limitations when approaching this project:
+
+1. Data is not up to date.
+  - Information used is provided by Kaggle and has been updated in November of 2023.
+  - Potential new artist and new songs after the dataset had been provided is not within the dataset.
+
+2. Data does not have primary keys.
+  - Data provided is from Spotify, but connecting the data relies on the artist within it.
+  - The data is not 1:1, some values will not be matched with others which will result not being in the dataset.
+  - Null values will exist and have to be fixed.
+
+3. 
 
 ## References
 
