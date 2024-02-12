@@ -94,7 +94,7 @@ This is an interactable dashboard. [Click here to interact with it.](https://pub
 
 ### Top Artists by Spotify Listeners
 
-[Top Artist](https://github.com/JLeData/music-genre-and-artist-analysis/blob/main/visuals/Artist%20Bar%20Chart.png)
+![Top Artist](https://github.com/JLeData/music-genre-and-artist-analysis/blob/main/visuals/Artist%20Bar%20Chart.png)
 
 [Link to visual.](https://public.tableau.com/app/profile/jordan.le6101/viz/artist_assessment/Sheet1)
 
