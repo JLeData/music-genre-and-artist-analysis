@@ -90,6 +90,8 @@ Present links to Tablea Public and screenshots of data visualizations in this se
 
 ![Genre Analysis](https://github.com/JLeData/music-genre-and-artist-analysis/blob/main/visuals/Genre%20and%20Song%20Distribution.png)
 
+This is an interactable dashboard. Click [here](https://public.tableau.com/app/profile/jordan.le6101/viz/artistgenreanalysis/GenreandSongDistribution) to interact with it.
+
 ## Results and Findings
 
 In progress
