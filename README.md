@@ -187,8 +187,8 @@ These were some limitations encountered during this project:
 I want to give a big shoutout to these platforms for being awesome and helping me out during this project:
 
 1. **Kaggle Community**: Acknowledgment to the Kaggle community for providing valuable datasets, resources, and a collaborative space.
-  - Byomokesh Senapati for providing [Spotify Song Attributes](https://www.kaggle.com/datasets/byomokeshsenapati/spotify-song-attributes)
-  - meer atif magsi for providing [Spotify most streamed songs](https://www.kaggle.com/datasets/meeratif/spotify-most-streamed-songs-of-all-time), [Spotify Stats](https://www.kaggle.com/datasets/meeratif/spotify-most-streamed-artists-of-all-time), and [Spotify top artists by monthly listeners](https://www.kaggle.com/datasets/meeratif/spotify-top-artists-by-monthly-listeners)  
+   - Byomokesh Senapati for providing [Spotify Song Attributes](https://www.kaggle.com/datasets/byomokeshsenapati/spotify-song-attributes)
+   - meer atif magsi for providing [Spotify most streamed songs](https://www.kaggle.com/datasets/meeratif/spotify-most-streamed-songs-of-all-time), [Spotify Stats](https://www.kaggle.com/datasets/meeratif/spotify-most-streamed-artists-of-all-time), and [Spotify top artists by monthly listeners](https://www.kaggle.com/datasets/meeratif/spotify-top-artists-by-monthly-listeners)  
 
 2. **Google BigQuery**: Utilization of Google BigQuery's data analytics capabilities.
 
@@ -218,7 +218,5 @@ With Tableau Public, I got a better sense of its potential for creativity in mak
 
 ### Overall
 
-This project was a great opportunity to enhance my skills with data analytic tools. As someone who loves music, I was genuinely intrigued by the outcomes of this project. It was interesting to see how my music taste differs from others', but it also reinforced the idea that everyone has their own preferences when it comes to music, and that's perfectly fine.
-
-Music holds significant importance for everyone in some way, and this project allowed me to explore that connection further. It provided valuable practice in an area I'm passionate about and helped me gain a better understanding of the tools data analysts use. Overall, it gave me a clearer perspective on the potential of these tools and how I can leverage them in future projects.
+This project was a fascinating blend of my love for music and my interest in data analytics. It was eye-opening to see how diverse musical preferences can be, highlighting the unique connection each person has with music. Exploring this intersection provided valuable practice and deepened my understanding of data analysis tools. It's given me a clearer vision of how to leverage these tools in future projects.
 
