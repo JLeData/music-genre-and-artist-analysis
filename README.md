@@ -29,7 +29,7 @@ This project aims to analyze various music datasets from Kaggle, with a focus on
    - Assess top 25 artist popularity on Spotify with Kaggle data. Analyze metrics like total listeners and daily streams.
 
 3.Top Trending Artists:
-    - Identify trending Spotify artists from Kaggle data. Explore overlap with top 25 artists, assessing potential for continued rise.
+   - Identify trending Spotify artists from Kaggle data. Explore overlap with top 25 artists, assessing potential for continued rise.
 
 ## Data Source
 
