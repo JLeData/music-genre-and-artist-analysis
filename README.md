@@ -126,14 +126,14 @@ This is an interactive dashboard. [Click here to interact with it.](https://publ
 These were some limitations encountered during this project:
 
 1. Data timeliness:
-  - Information used is provided by Kaggle and has been updated in November of 2023.
-  - Potential new artist and new songs after the dataset had been provided is not within the dataset.
-  - Trend and listener count has much room for change over time and the potential impact of it.
+   - Information used is provided by Kaggle and has been updated in November of 2023.
+   - Potential new artist and new songs after the dataset had been provided is not within the dataset.
+   - Trend and listener count has much room for change over time and the potential impact of it.
 
 2. Lack of primary keys:
-  - Data provided is from Spotify, but connecting the data relies on the artist within it as the datasets are separate from each other.
-  - The data is not 1:1, some values will not be matched with others which will result not being in the dataset and provides the challenge of cleaning it.
-  - Null values will exist and have to be cleaned.
+   - Data provided is from Spotify, but connecting the data relies on the artist within it as the datasets are separate from each other.
+   - The data is not 1:1, some values will not be matched with others which will result not being in the dataset and provides the challenge of cleaning it.
+   - Null values will exist and have to be cleaned.
 
 3. Google Big Query trial version constraint:
    - Initially started project in the trial version of Google Big query.
@@ -141,13 +141,13 @@ These were some limitations encountered during this project:
    - Upgraded needed to properly clean data and create new tables.
    - Not all datasets were used due to trying to use trial version.
 
-4. Genre classification challenges
+4. Genre classification challenges:
    - Categorization of music into specific genres can be subjective and may vary between different sources.
    - Potential for genre-based inconsistencies.
    - Artist categorized into one genre when there is potentially songs they branched out their music genre in. Dataset based on the majority of their music's genre classification was.
    - Chatgpt categorization of music genres to sub-genres may be inconsistent.
 
-5. Data is limited source to Spotify users only.
+5. Data is limited source to Spotify users only:
    - There are many other music streaming services other than Spotify. This is strictly data in regards to Spotify users.
    - Findings may not fully represent the broader landscape of music consumption across various platforms.
 
