@@ -13,6 +13,7 @@
 - [Limitations](#limitations)
 - [References](#references)
 - [Personal Goals](#personal-goals)
+- [Project Reflection](#project-reflection)
 
 ## Project Overview
 
@@ -83,8 +84,6 @@ Answer key questions:
 ## Data Analysis
 
 Visual created for data analysis
-
-Present links to Tablea Public and screenshots of data visualizations in this section.
 
 ### Genre Popularity Assessment
 
@@ -185,20 +184,41 @@ These were some limitations encountered during this project:
 
 ### Thank You
 
-I would like to express my sincere gratitude to the following individuals and platforms for their contributions and support throughout this project:
+I want to give a big shoutout to these platforms for being awesome and helping me out during this project:
 
-1. **Kaggle Community**: Thank you to the Kaggle community for providing valuable datasets, resources, and a collaborative space for data enthusiasts.
+1. **Kaggle Community**: Acknowledgment to the Kaggle community for providing valuable datasets, resources, and a collaborative space.
   - Byomokesh Senapati for providing [Spotify Song Attributes](https://www.kaggle.com/datasets/byomokeshsenapati/spotify-song-attributes)
   - meer atif magsi for providing [Spotify most streamed songs](https://www.kaggle.com/datasets/meeratif/spotify-most-streamed-songs-of-all-time), [Spotify Stats](https://www.kaggle.com/datasets/meeratif/spotify-most-streamed-artists-of-all-time), and [Spotify top artists by monthly listeners](https://www.kaggle.com/datasets/meeratif/spotify-top-artists-by-monthly-listeners)  
 
-3. **Google BigQuery**: Appreciation to Google BigQuery for the powerful data analytics capabilities and tools that significantly contributed to the success of this project.
+2. **Google BigQuery**: Utilization of Google BigQuery's data analytics capabilities.
 
-4. **Tableau Public**: Special thanks to Tableau Public for enabling me to create engaging and insightful data visualizations for this analysis.
+3. **Tableau Public**: Utilization of Tableau Public for creating data visualizations.
+   
+### Lessons Learnt
 
-5. **Open Source Community**: A big thank you to the broader open-source community for creating and maintaining the tools and libraries that made this project possible.
+During this project, I really got the hang of using data analysis tools. It was fascinating to see how powerful they are for sorting and cleaning up loads of data. I actually found the process of tracking and tidying up data surprisingly interesting. Even though I ran into quite a few challenges, I had a blast working on it.
 
-6. **Peers and Mentors**: Gratitude to my peers and mentors who provided guidance, feedback, and support throughout the development of this project.
+One thing that really stood out to me was how you can combine data from different sources. When I was doing the Google Data Analytics certificate, I learned a lot about using primary keys to link datasets. But in this project, there weren't any primary keys to work with. Did that leave room for mistakes? Definitely. But I took it as a chance to learn and figure things out. It was really satisfying to see all the data come together into something new and clean in the end.
 
-Your contributions and support have been invaluable, and I am truly thankful for the collaborative and inspiring environment that facilitated the success of this project.
+Tableau Public turned out to be quite a different experience for me. As someone who's used to working with laser cutters and creating my own projects, I thought I'd naturally connect with Tableau's visualization tools. However, it ended up being the most challenging aspect of the project. Despite my creative nature, I found Tableau's interface and functions to have a steeper learning curve than I anticipated. While there are numerous tools available, navigating them didn't feel very intuitive.
 
+With Tableau Public, there's a plethora of features and options at your fingertips, but figuring out how to use them effectively was a bit overwhelming at first. From creating interactive dashboards to designing visually appealing charts, there's a lot to learn and explore. However, with each attempt, I gained a deeper understanding of the software and its capabilities.
+
+Throughout the project, I recognized the potential of Tableau Public and the possibilities it offers for creating impactful visuals. As someone with a creative nature, I was particularly drawn to the idea of using Tableau to unleash my creativity and transform data into compelling stories. However, I also realized that I need more practice to fully harness its capabilities and unleash my creativity to its fullest extent.
+
+Despite the initial challenges, I'm eager to dive deeper into Tableau and refine my skills in data visualization. I believe that with continued practice and exploration, I'll be able to leverage Tableau to create visually stunning and insightful dashboards that truly resonate with audiences. As with any new tool or skill, practice makes perfect, and I'm excited to continue honing my abilities with Tableau Public in future projects
+
+### What Would I Have Done Differently
+
+I learned about using APIs to gather data from a friend midway through the project. It's something I'm interested in exploring further, especially for recording data from the Spotify API to get a more accurate representation. While I'm grateful for the Kaggle dataset for practice, tapping into the Spotify API seems like it could provide richer information.
+
+Using the trial version of Google BigQuery at the start wasn't the best move. It was quite limiting in terms of what I could do with the data, and some datasets ended up unused because of it. Eventually, I upgraded to access all the tools, which was essential because the trial version didn't offer much.
+
+With Tableau Public, I got a better sense of its potential for creativity in making visualizations. I think the visuals in this project could be much more appealing. Tableau Public has tools similar to Inkscape and Xtool, which I use often for laser cutting. However, it takes some digging to find those tools and figure out how to work with them while keeping the data visible. It's a bit challenging, but I see it as a task to tackle in the future.
+
+### Overall
+
+This project was a great opportunity to enhance my skills with data analytic tools. As someone who loves music, I was genuinely intrigued by the outcomes of this project. It was interesting to see how my music taste differs from others', but it also reinforced the idea that everyone has their own preferences when it comes to music, and that's perfectly fine.
+
+Music holds significant importance for everyone in some way, and this project allowed me to explore that connection further. It provided valuable practice in an area I'm passionate about and helped me gain a better understanding of the tools data analysts use. Overall, it gave me a clearer perspective on the potential of these tools and how I can leverage them in future projects.
 
