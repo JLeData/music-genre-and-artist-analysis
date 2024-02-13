@@ -28,7 +28,7 @@ This project aims to analyze various music datasets from Kaggle, with a focus on
 2. Artist Popularity Assessment:
    - Assess top 25 artist popularity on Spotify with Kaggle data. Analyze metrics like total listeners and daily streams.
 
-3.Top Trending Artists:
+3. Top Trending Artists:
    - Identify trending Spotify artists from Kaggle data. Explore overlap with top 25 artists, assessing potential for continued rise.
 
 ## Data Source
@@ -61,7 +61,7 @@ Perform the following tasks:
 
 1. Data loading and inspection
 
-2. organize fields and records
+2. Organize fields and records
 
 3. Handle missing values
 
@@ -202,11 +202,11 @@ One thing that really stood out to me was how you can combine data from differen
 
 Tableau Public turned out to be quite a different experience for me. As someone who's used to working with laser cutters and creating my own projects, I thought I'd naturally connect with Tableau's visualization tools. However, it ended up being the most challenging aspect of the project. Despite my creative nature, I found Tableau's interface and functions to have a steeper learning curve than I anticipated. While there are numerous tools available, navigating them didn't feel very intuitive.
 
-With Tableau Public, there's a plethora of features and options at your fingertips, but figuring out how to use them effectively was a bit overwhelming at first. From creating interactive dashboards to designing visually appealing charts, there's a lot to learn and explore. However, with each attempt, I gained a deeper understanding of the software and its capabilities.
+With Tableau Public, there are many features and options at your fingertips, but figuring out how to use them effectively was a bit overwhelming at first. From creating interactive dashboards to designing visually appealing charts, there's a lot to learn and explore. However, with each attempt, I gained a deeper understanding of the software and its capabilities.
 
 Throughout the project, I recognized the potential of Tableau Public and the possibilities it offers for creating impactful visuals. As someone with a creative nature, I was particularly drawn to the idea of using Tableau to unleash my creativity and transform data into compelling stories. However, I also realized that I need more practice to fully harness its capabilities and unleash my creativity to its fullest extent.
 
-Despite the initial challenges, I'm eager to dive deeper into Tableau and refine my skills in data visualization. I believe that with continued practice and exploration, I'll be able to leverage Tableau to create visually stunning and insightful dashboards that truly resonate with audiences. As with any new tool or skill, practice makes perfect, and I'm excited to continue honing my abilities with Tableau Public in future projects
+Despite the initial challenges, I'm eager to dive deeper into Tableau and refine my skills in data visualization. I believe that with continued practice and exploration, I'll be able to leverage Tableau to create visually stunning and insightful dashboards that truly resonate with audiences. As with any new tool or skill, practice makes perfect, and I'm excited to continue honing my abilities with Tableau Public in future projects.
 
 ### What Would I Have Done Differently
 
