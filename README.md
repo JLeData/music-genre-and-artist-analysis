@@ -196,7 +196,7 @@ I want to give a big shoutout to these platforms for being awesome and helping m
    
 ### Lessons Learnt
 
-During this project, I really got the hang of using data analysis tools. It was fascinating to see how powerful they are for sorting and cleaning up loads of data. I actually found the process of tracking and tidying up data surprisingly interesting. Even though I ran into quite a few challenges, I had a blast working on it.
+During this project, I really got the hang of using data analysis tools. It was fascinating to see how powerful they are for sorting and cleaning up loads of data. I found the process of tracking and tidying up data interesting and fun. Even though I ran into quite a few challenges, I had a blast working on it.
 
 One thing that really stood out to me was how you can combine data from different sources. When I was doing the Google Data Analytics certificate, I learned a lot about using primary keys to link datasets. But in this project, there weren't any primary keys to work with. Did that leave room for mistakes? Definitely. But I took it as a chance to learn and figure things out. It was really satisfying to see all the data come together into something new and clean in the end.
 
