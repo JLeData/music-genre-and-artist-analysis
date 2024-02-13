@@ -368,16 +368,16 @@ WHERE artist_table_1 = 'Cheat Codes';
 ```
 
 ```sql
-select *
-from music-artist-411616.combined.popular_genre_analysis
-where genre is null;
+SELECT *
+FROM music-artist-411616.combined.popular_genre_analysis
+WHERE genre is null;
 -- look for null values and artist
 ```
 
 ```sql
-select *
-from music-artist-411616.combined.popular_genre_analysis
-where artist_table_2 = INSERT ARTIST NAME
+SELECT *
+FROM music-artist-411616.combined.popular_genre_analysis
+WHERE artist_table_2 = INSERT ARTIST NAME
 -- check for artist if they have multiple songs and same genre
 ```
 
