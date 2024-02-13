@@ -177,4 +177,28 @@ These were some limitations encountered during this project:
 2. Iterative Learning:
    - Embrace iterative learning for continuous improvement in analysis techniques and visualization skills.
 
-## 
+## End of Project
+
+---
+
+## Project Reflection
+
+### Thank You
+
+I would like to express my sincere gratitude to the following individuals and platforms for their contributions and support throughout this project:
+
+1. **Kaggle Community**: Thank you to the Kaggle community for providing valuable datasets, resources, and a collaborative space for data enthusiasts.
+  - Byomokesh Senapati for providing [Spotify Song Attributes](https://www.kaggle.com/datasets/byomokeshsenapati/spotify-song-attributes)
+  - meer atif magsi for providing [Spotify most streamed songs](https://www.kaggle.com/datasets/meeratif/spotify-most-streamed-songs-of-all-time), [Spotify Stats](https://www.kaggle.com/datasets/meeratif/spotify-most-streamed-artists-of-all-time), and [Spotify top artists by monthly listeners](https://www.kaggle.com/datasets/meeratif/spotify-top-artists-by-monthly-listeners)  
+
+3. **Google BigQuery**: Appreciation to Google BigQuery for the powerful data analytics capabilities and tools that significantly contributed to the success of this project.
+
+4. **Tableau Public**: Special thanks to Tableau Public for enabling me to create engaging and insightful data visualizations for this analysis.
+
+5. **Open Source Community**: A big thank you to the broader open-source community for creating and maintaining the tools and libraries that made this project possible.
+
+6. **Peers and Mentors**: Gratitude to my peers and mentors who provided guidance, feedback, and support throughout the development of this project.
+
+Your contributions and support have been invaluable, and I am truly thankful for the collaborative and inspiring environment that facilitated the success of this project.
+
+
