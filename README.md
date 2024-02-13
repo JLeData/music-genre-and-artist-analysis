@@ -90,7 +90,7 @@ Present links to Tablea Public and screenshots of data visualizations in this se
 
 ![Genre Analysis](https://github.com/JLeData/music-genre-and-artist-analysis/blob/main/visuals/Genre%20and%20Song%20Distribution.png)
 
-This is an interactable dashboard. [Click here to interact with it.](https://public.tableau.com/app/profile/jordan.le6101/viz/artistgenreanalysis/GenreandSongDistribution)
+This is an interactive dashboard. [Click here to interact with it.](https://public.tableau.com/app/profile/jordan.le6101/viz/artistgenreanalysis/GenreandSongDistribution)
 
 ### Top Artists by Spotify Listeners
 
@@ -106,23 +106,52 @@ This is an interactable dashboard. [Click here to interact with it.](https://pub
 
 ## Results and Findings
 
-In progress
+1. What is the most popular genre?
+   - Pop seems to be the most popular genre according to data from Spotify Listeners.
+
+2. Who is the most popular artist?
+   - By Listeners and fan count, The Weeknd with the genre of R&B / Soul is the most popular artist on Spotify.
+
+3. Is there any correlation between the two?
+   - Pop might indicate a broader appeal among Spotify listeners with many artists being on the top 25 listeners.
+   - The Weeknd has a large presence as the only R&B / Soul artist in the top 25 having the highest listener/fan base. Potential for a mixture of other genres with a main focus on R&B / soul has to be taken into consideration.
+   - Pop may be a very dominate genre at have the most songs in the dataset, but other genres such as Rock and Hip-Hop / Rap appear at the top as well.
+
+4. Who are the top 5 potential upcoming artist not in the top 25?
+   - The top trending artists according to the visualizations are Olivia Rodrigo, Doja Cat, Cardi B, Kacey Musgraves, Dove Cameron, and Anirudh Ravichander. 3/5 are Pop genre, 1 Country, and last is Hip-Hop / Rap.
+   - Of these 5 artists, Doja Cat is in the top 25 Spotify listeners and as of this dataset posting, the highest trending artist.
+   - The other 4 artist seem to be high trending artist which Kacey Musgraves stands out the most since Country is on the lower end of the listener distribution. Being high up on trending shows the potential of this artist in a genre with very little listeners in comparison to, for example, Pop.
 
 ## Limitations
 
-These were some limitations when approaching this project:
+These were some limitations encountered during this project:
 
-1. Data is not current.
+1. Data timeliness:
   - Information used is provided by Kaggle and has been updated in November of 2023.
   - Potential new artist and new songs after the dataset had been provided is not within the dataset.
-  - Trend and listener count has much room for change over time.
+  - Trend and listener count has much room for change over time and the potential impact of it.
 
-2. Data does not have primary keys.
+2. Lack of primary keys:
   - Data provided is from Spotify, but connecting the data relies on the artist within it as the datasets are separate from each other.
-  - The data is not 1:1, some values will not be matched with others which will result not being in the dataset.
-  - Null values will exist and have to be fixed.
+  - The data is not 1:1, some values will not be matched with others which will result not being in the dataset and provides the challenge of cleaning it.
+  - Null values will exist and have to be cleaned.
 
-3. 
+3. Google Big Query trial version constraint:
+   - Initially started project in the trial version of Google Big query.
+   - Limited on what functions were able to be used.
+   - Upgraded needed to properly clean data and create new tables.
+   - Not all datasets were used due to trying to use trial version.
+
+4. Genre classification challenges
+   - Categorization of music into specific genres can be subjective and may vary between different sources.
+   - Potential for genre-based inconsistencies.
+   - Artist categorized into one genre when there is potentially songs they branched out their music genre in. Dataset based on the majority of their music's genre classification was.
+   - Chatgpt categorization of music genres to sub-genres may be inconsistent.
+
+5. Data is limited source to Spotify users only.
+   - There are many other music streaming services other than Spotify. This is strictly data in regards to Spotify users.
+   - Findings may not fully represent the broader landscape of music consumption across various platforms.
+
 
 ## References
 
@@ -147,3 +176,5 @@ These were some limitations when approaching this project:
 
 2. Iterative Learning:
    - Embrace iterative learning for continuous improvement in analysis techniques and visualization skills.
+
+## 
