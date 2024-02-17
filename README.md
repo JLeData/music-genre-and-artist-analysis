@@ -216,6 +216,9 @@ Using the trial version of Google BigQuery at the start wasn't the best move. It
 
 With Tableau Public, I got a better sense of its potential for creativity in making visualizations. I think the visuals in this project could be much more appealing. Tableau Public has tools similar to Inkscape and Xtool, which I use often for laser cutting. However, it takes some digging to find those tools and figure out how to work with them while keeping the data visible. It's a bit challenging, but I see it as a task to tackle in the future.
 
+UPDATE:
+My friend mentioned a useful tool called [Code Beautify](https://codebeautify.org/sqlformatter) that allows me to reformat my queries for consistency. I have gone back and reformatted my queries in my data clean up section. It was explained to me that everyone has their own unique way of formatting the queries and codes. Since there are so many different styles, it can get overwhelming reading code and having a consistent format is very beneficial when others need to read the code. I will keep this in mind when working on future projects. Many thanks to him for the feedback!
+
 ### Overall
 
 This project was a fascinating blend of my love for music and my interest in data analytics. It was eye-opening to see how diverse musical preferences can be, highlighting the unique connection each person has with music. Exploring this intersection provided valuable practice and deepened my understanding of data analysis tools. It's given me a clearer vision of how to leverage these tools in future projects.
