@@ -62,75 +62,72 @@ Renaming tables to lowercase for consistent and oranized structure:
   
 ```sql
 -- Rename columns for monthly_listerners
-ALTER TABLE music-artist-411616.spotify.monthly_listeners
-RENAME COLUMN artist_ref TO artist_table_1;
+ALTER TABLE 
+  music - artist - 411616.spotify.monthly_listeners RENAME COLUMN artist_ref TO artist_table_1;
 ```
 ```sql
-ALTER TABLE music-artist-411616.spotify.monthly_listeners
-RENAME COLUMN Listeners TO listener_fans;
+ALTER TABLE 
+  music - artist - 411616.spotify.monthly_listeners RENAME COLUMN Listeners TO listener_fans;
 ```
 ```sql
-ALTER TABLE music-artist-411616.spotify.monthly_listeners
-RENAME COLUMN Daily_Trend TO daily_trend;
+ALTER TABLE 
+  music - artist - 411616.spotify.monthly_listeners RENAME COLUMN Daily_Trend TO daily_trend;
 ```
 ```sql
-ALTER TABLE music-artist-411616.spotify.monthly_listeners
-RENAME COLUMN PEAK TO peak;
+ALTER TABLE 
+  music - artist - 411616.spotify.monthly_listeners RENAME COLUMN PEAK TO peak;
 ```
 ```sql
-ALTER TABLE music-artist-411616.spotify.monthly_listeners
-RENAME COLUMN PkListeners to peak_listeners;
+ALTER TABLE 
+  music - artist - 411616.spotify.monthly_listeners RENAME COLUMN PkListeners to peak_listeners;
 ```
 ```sql
 -- Rename columns for most_streamed_artist
-ALTER TABLE music-artist-411616.spotify.most_streamed_artists
-RENAME COLUMN Artist TO artist_table_2;
+ALTER TABLE 
+  music - artist - 411616.spotify.most_streamed_artists RENAME COLUMN Artist TO artist_table_2;
 ```
 ```sql	
-ALTER TABLE music-artist-411616.spotify.most_streamed_artists
-RENAME COLUMN Streams TO streams_by_artist;
+ALTER TABLE 
+  music - artist - 411616.spotify.most_streamed_artists RENAME COLUMN Streams TO streams_by_artist;
 ```
 ```sql
-ALTER TABLE music-artist-411616.spotify.most_streamed_artists
-RENAME COLUMN Daily TO daily_streams;
+ALTER TABLE 
+  music - artist - 411616.spotify.most_streamed_artists RENAME COLUMN Daily TO daily_streams;
 ```
 ```sql
-ALTER TABLE music-artist-411616.spotify.most_streamed_artists
-RENAME COLUMN As_lead TO as_primary_artist;
+ALTER TABLE 
+  music - artist - 411616.spotify.most_streamed_artists RENAME COLUMN As_lead TO as_primary_artist;
 ```
 ```sql
-ALTER TABLE music-artist-411616.spotify.most_streamed_artists
-RENAME COLUMN Solo TO solo_projects;
+ALTER TABLE 
+  music - artist - 411616.spotify.most_streamed_artists RENAME COLUMN Solo TO solo_projects;
 ```
 ```sql
-ALTER TABLE music-artist-411616.spotify.most_streamed_artists
-RENAME COLUMN As_feature TO featured_guest;
+ALTER TABLE 
+  music - artist - 411616.spotify.most_streamed_artists RENAME COLUMN As_feature TO featured_guest;
 ```
 ```sql
 -- Rename columns for spotify_most_streamed
-ALTER TABLE music-artist-411616.spotify.spotify_most_streamed
-RENAME COLUMN Artist_and_Title TO artist_table3_song_title;
---note: rename the field for now but plans on separating into their own columns
+ALTER TABLE 
+  music - artist - 411616.spotify.spotify_most_streamed RENAME COLUMN Artist_and_Title TO artist_table3_song_title;
 ```
 
 ```sql
-ALTER TABLE music-artist-411616.spotify.spotify_most_streamed
-RENAME COLUMN Streams TO stream_song;
---note: chose this naming convention since there are other fields that has stream in it as well, but this one is based on the song played.
+ALTER TABLE 
+  music - artist - 411616.spotify.spotify_most_streamed RENAME COLUMN Streams TO stream_song;
 ```
 ```sql
-ALTER TABLE music-artist-411616.spotify.spotify_most_streamed
-RENAME COLUMN Daily TO daily_song;
---note: same situation as stream_song
+ALTER TABLE 
+  music - artist - 411616.spotify.spotify_most_streamed RENAME COLUMN Daily TO daily_song;
 ```
 ```sql
 -- Rename columns for spotify_song_attributes
-ALTER TABLE music-artist-411616.spotify.spotify_song_attributes
-RENAME COLUMN trackName TO song_title;
+ALTER TABLE 
+  music - artist - 411616.spotify.spotify_song_attributes RENAME COLUMN trackName TO song_title;
 ```
 ```sql
-ALTER TABLE music-artist-411616.spotify.spotify_song_attributes
-RENAME COLUMN artistName TO artist_table_4;
+ALTER TABLE 
+  music - artist - 411616.spotify.spotify_song_attributes RENAME COLUMN artistName TO artist_table_4;
 ```
 ## Step 4: Clean Up Fields and Data Types
 
@@ -139,36 +136,57 @@ RENAME COLUMN artistName TO artist_table_4;
 Delete fields irrelevant to analysis
 
 ```sql
-ALTER TABLE music-artist-411616.spotify.spotify_song_attributes
-DROP COLUMN energy;
--- Testing to see if it runs
+ALTER TABLE 
+  music - artist - 411616.spotify.spotify_song_attributes 
+DROP 
+  COLUMN energy;
 ```
 ```sql
-ALTER TABLE music-artist-411616.spotify.spotify_song_attributes
-DROP COLUMN key,
-DROP COLUMN mode;
+ALTER TABLE 
+  music - artist - 411616.spotify.spotify_song_attributes 
+DROP 
+  COLUMN key, 
+DROP 
+  COLUMN mode;
 ```
 Dropping multiple columns test - success
 
 ```sql
 -- Alter table statements to drop columns
-ALTER TABLE music-artist-411616.spotify.spotify_song_attributes
-DROP COLUMN msPlayed,
-DROP COLUMN danceability,
-DROP COLUMN loudness,
-DROP COLUMN speechiness,
-DROP COLUMN acousticness,
-DROP COLUMN instrumentalness,
-DROP COLUMN liveness,
-DROP COLUMN valence,
-DROP COLUMN tempo,
-DROP COLUMN type,
-DROP COLUMN id,
-DROP COLUMN uri,
-DROP COLUMN track_href,
-DROP COLUMN analysis_url,
-DROP COLUMN duration_ms,
-DROP COLUMN time_signature;
+ALTER TABLE 
+  music - artist - 411616.spotify.spotify_song_attributes 
+DROP 
+  COLUMN msPlayed, 
+DROP 
+  COLUMN danceability, 
+DROP 
+  COLUMN loudness, 
+DROP 
+  COLUMN speechiness, 
+DROP 
+  COLUMN acousticness, 
+DROP 
+  COLUMN instrumentalness, 
+DROP 
+  COLUMN liveness, 
+DROP 
+  COLUMN valence, 
+DROP 
+  COLUMN tempo, 
+DROP 
+  COLUMN type, 
+DROP 
+  COLUMN id, 
+DROP 
+  COLUMN uri, 
+DROP 
+  COLUMN track_href, 
+DROP 
+  COLUMN analysis_url, 
+DROP 
+  COLUMN duration_ms, 
+DROP 
+  COLUMN time_signature;
 ```
 Attempt at using BEGIN, ROLLBACK, COMMIT, but an error message occurred saying transaction statements are not supported.
 
@@ -177,8 +195,11 @@ Alter table is a success, 3 columns remain: song_title, artist_table_4, and genr
 ```sql
 -- Due to using the free version of Big Query, there are limitations on updating data types.
 -- Example (not applicable due to limitations):
-UPDATE music-artist-411616.spotify.most_streamed_artists
-SET daily_streams = CEIL(daily_streams);
+UPDATE 
+  music - artist - 411616.spotify.most_streamed_artists 
+SET 
+  daily_streams = CEIL(daily_streams);
+
 ```
 This query would have been utilized to update the floats into whole numbers for the analysis, but there is a restriction in the free version.
 
@@ -189,8 +210,8 @@ A syntax error appears saying changes to data type can affect the data.
 Attempt to modify the data type (not applicable due to limitations):
 
 ```sql
-ALTER TABLE music-artist-411616.spotify.most_streamed_artists
-MODIFY daily_streams INTEGER;
+ALTER TABLE 
+  music - artist - 411616.spotify.most_streamed_artists MODIFY daily_streams INTEGER;
 ```
 
 This query can modify the data type, but unable to do so using the free version.
@@ -201,9 +222,12 @@ It does not make much sense that it is not whole numbers as these are average re
 
 ```sql
 -- Add two new columns to your table
-ALTER TABLE music-artist-411616.spotify.spotify_most_streamed
-ADD COLUMN artist_name_3 STRING,
-ADD COLUMN song_title STRING;
+ALTER TABLE 
+  music - artist - 411616.spotify.spotify_most_streamed 
+ADD 
+  COLUMN artist_name_3 STRING, 
+ADD 
+  COLUMN song_title STRING;
 ```
 
 Unable to update columns due to free trial limitation.
@@ -211,10 +235,11 @@ Unable to update columns due to free trial limitation.
 This query would be able to separate artist from song title in spotify_most_streamed.
 ```sql
 -- Update the new columns by splitting the existing column.
-UPDATE music-artist-411616.spotify.spotify_most_streamed
-SET
-  artist_name_3 = SPLIT(artist_and_title, ' - ')[OFFSET(0)],
-  song_title = SPLIT(artist_and_title, ' - ')[OFFSET(1)];
+UPDATE 
+  music - artist - 411616.spotify.spotify_most_streamed 
+SET 
+  artist_name_3 = SPLIT(artist_and_title, ' - ') [OFFSET(0) ], 
+  song_title = SPLIT(artist_and_title, ' - ') [OFFSET(1) ];
 ```
 
 NOTE:
@@ -223,7 +248,9 @@ NOTE:
 
 ```sql
 -- Remove spotify_most_streamed
-DROP TABLE music-artist-411616.spotify.spotify_most_streamed
+DROP 
+  TABLE music - artist - 411616.spotify.spotify_most_streamed
+
 ```
 
 Keep information in readme to show limitations on project and direction it has taken
@@ -237,16 +264,16 @@ Keep information in readme to show limitations on project and direction it has t
 ```sql
 -- Create a new table for popular genre analysis by taking fields
 -- artist_name, genre, streams_by_artist, song_title
-CREATE TABLE music-artist-411616.combined.popular_genre_analysis AS
-SELECT DISTINCT artist_table_2,
-       genre,
-       streams_by_artist,
-       song_title
-FROM music-artist-411616.spotify.most_streamed_artists AS two
-JOIN music-artist-411616.spotify.spotify_song_attributes AS four
-ON two.artist_table_2 = four.artist_table_4
-JOIN music-artist-411616.spotify.monthly_listeners AS one
-ON four.artist_table_4 = one.artist_table_1;
+CREATE TABLE music - artist - 411616.combined.popular_genre_analysis AS 
+SELECT 
+  DISTINCT artist_table_2, 
+  genre, 
+  streams_by_artist, 
+  song_title 
+FROM 
+  music - artist - 411616.spotify.most_streamed_artists AS two 
+  JOIN music - artist - 411616.spotify.spotify_song_attributes AS four ON two.artist_table_2 = four.artist_table_4 
+  JOIN music - artist - 411616.spotify.monthly_listeners AS one ON four.artist_table_4 = one.artist_table_1;
 ```
 
 NOTE: 
@@ -255,34 +282,34 @@ NOTE:
 2. Artist Popularity Assessment
 
 ```sql
-CREATE TABLE music-artist-411616.combined.artist_popularity_assessment AS
-SELECT DISTINCT artist_table_1,
-       listener_fans,
-       daily_streams,
-       daily_trend,
-       streams_by_artist,
-       peak,
-       peak_listeners
-FROM music-artist-411616.spotify.most_streamed_artists AS two
-JOIN music-artist-411616.spotify.spotify_song_attributes AS four
-ON two.artist_table_2 = four.artist_table_4
-JOIN music-artist-411616.spotify.monthly_listeners AS one
-ON four.artist_table_4 = one.artist_table_1;
+CREATE TABLE music - artist - 411616.combined.artist_popularity_assessment AS 
+SELECT 
+  DISTINCT artist_table_1, 
+  listener_fans, 
+  daily_streams, 
+  daily_trend, 
+  streams_by_artist, 
+  peak, 
+  peak_listeners 
+FROM 
+  music - artist - 411616.spotify.most_streamed_artists AS two 
+  JOIN music - artist - 411616.spotify.spotify_song_attributes AS four ON two.artist_table_2 = four.artist_table_4 
+  JOIN music - artist - 411616.spotify.monthly_listeners AS one ON four.artist_table_4 = one.artist_table_1;
 ```
 3. popular genre analsyis
 
 ```sql
-CREATE TABLE music-artist-411616.combined.emerging_genre AS
-SELECT DISTINCT artist_table_1,
-       genre,
-       listener_fans,
-       daily_trend,
-       song_title
-FROM music-artist-411616.spotify.most_streamed_artists AS two
-JOIN music-artist-411616.spotify.spotify_song_attributes AS four
-ON two.artist_table_2 = four.artist_table_4
-JOIN music-artist-411616.spotify.monthly_listeners AS one
-ON four.artist_table_4 = one.artist_table_1;
+CREATE TABLE music - artist - 411616.combined.emerging_genre AS 
+SELECT 
+  DISTINCT artist_table_1, 
+  genre, 
+  listener_fans, 
+  daily_trend, 
+  song_title 
+FROM 
+  music - artist - 411616.spotify.most_streamed_artists AS two 
+  JOIN music - artist - 411616.spotify.spotify_song_attributes AS four ON two.artist_table_2 = four.artist_table_4 
+  JOIN music - artist - 411616.spotify.monthly_listeners AS one ON four.artist_table_4 = one.artist_table_1;
 ```
 
 NOTE: 
@@ -297,37 +324,47 @@ NOTE:
 ```sql
 -- look for amount of null values within each field
 -- checking artist_popularity_asessment table
-SELECT *
-FROM music-artist-411616.combined.artist_popularity_assessment
-WHERE listener_fans IS NULL
-OR daily_streams IS NULL
-OR daily_trend IS NULL
-OR streams_by_artist IS NULL;
+SELECT 
+  * 
+FROM 
+  music - artist - 411616.combined.artist_popularity_assessment 
+WHERE 
+  listener_fans IS NULL 
+  OR daily_streams IS NULL 
+  OR daily_trend IS NULL 
+  OR streams_by_artist IS NULL;
 ```
 
 1 artist with daily_streams as null
 
 ```sql
 -- emerging_genre table
-SELECT *
-FROM music-artist-411616.combined.emerging_genre
-WHERE artist_table_1 IS NULL
-OR listener_fans IS NULL
-OR daily_trend IS NULL
-OR song_title IS NULL
-OR genre IS NULL;
+SELECT 
+  * 
+FROM 
+  music - artist - 411616.combined.emerging_genre 
+WHERE 
+  artist_table_1 IS NULL 
+  OR listener_fans IS NULL 
+  OR daily_trend IS NULL 
+  OR song_title IS NULL 
+  OR genre IS NULL;
 ```
 
 80 null values under genre.
 
 ```sql
 -- Popular_genre_analysis table
-SELECT *
-FROM music-artist-411616.combined.popular_genre_analysis
-WHERE artist_table_2 IS NULL
-OR streams_by_artist IS NULL
-OR song_title IS NULL
-OR genre IS NULL;
+-- Popular_genre_analysis table
+SELECT 
+  * 
+FROM 
+  music - artist - 411616.combined.popular_genre_analysis 
+WHERE 
+  artist_table_2 IS NULL 
+  OR streams_by_artist IS NULL 
+  OR song_title IS NULL 
+  OR genre IS NULL;
 ```
 NOTE:
 - 80 null values under genre.
@@ -346,9 +383,12 @@ NOTE:
 
 ```sql
 -- example of existing artist
-UPDATE music-artist-411616.combined.emerging_genre
-SET genre = 'chillwave'
-WHERE artist_table_1 = 'ODESZA';
+UPDATE 
+  music - artist - 411616.combined.emerging_genre 
+SET 
+  genre = 'chillwave' 
+WHERE 
+  artist_table_1 = 'ODESZA';
 ```
 
 revise popular_genre_analysis as well
@@ -356,40 +396,56 @@ revise popular_genre_analysis as well
 majority of nulls will be updated the same so all will not be posted
 
 ```sql
-UPDATE music-artist-411616.combined.popular_genre_analysis
-SET genre = 'edm'
-WHERE artist_table_2 = 'Cheat Codes';
+UPDATE 
+  music - artist - 411616.combined.popular_genre_analysis 
+SET 
+  genre = 'edm' 
+WHERE 
+  artist_table_2 = 'Cheat Codes';
+
 ```
 ```sql
-UPDATE music-artist-411616.combined.emerging_genre
-SET genre = 'edm'
-WHERE artist_table_1 = 'Cheat Codes';
--- setup to check for artist exist in table and rename genre
+UPDATE 
+  music - artist - 411616.combined.emerging_genre 
+SET 
+  genre = 'edm' 
+WHERE 
+  artist_table_1 = 'Cheat Codes';
 ```
 
 ```sql
-SELECT *
-FROM music-artist-411616.combined.popular_genre_analysis
-WHERE genre is null;
--- look for null values and artist
+SELECT 
+  * 
+FROM 
+  music - artist - 411616.combined.popular_genre_analysis 
+WHERE 
+  genre is null;
 ```
 
 ```sql
-SELECT *
-FROM music-artist-411616.combined.popular_genre_analysis
-WHERE artist_table_2 = INSERT ARTIST NAME
--- check for artist if they have multiple songs and same genre
+SELECT 
+  * 
+FROM 
+  music - artist - 411616.combined.popular_genre_analysis 
+WHERE 
+  artist_table_2 = INSERT ARTIST NAME -- check for artist if they have multiple songs and same genre
 ```
 
 ```sql
-UPDATE music-artist-411616.combined.popular_genre_analysis
-SET genre = INSERT GENRE NAME
-WHERE artist_table_2 = INSERT ARTIST NAME
+UPDATE 
+  music - artist - 411616.combined.popular_genre_analysis 
+SET 
+  genre = INSERT GENRE NAME 
+WHERE 
+  artist_table_2 = INSERT ARTIST NAME
 ```
 ```sql
-UPDATE music-artist-411616.combined.emerging_genre
-SET genre = INSERT GENRE NAME
-WHERE artist_table_1 = INSERT ARTIST NAME
+UPDATE 
+  music - artist - 411616.combined.emerging_genre 
+SET 
+  genre = INSERT GENRE NAME 
+WHERE 
+  artist_table_1 = INSERT ARTIST NAME
 ```
 
 Change both tables since they both contain genre
@@ -412,15 +468,21 @@ NOTE:
 
 ```sql
 -- create new field
-ALTER TABLE `music-artist-411616.combined.emerging_genre`
-ADD COLUMN classification STRING;
+ALTER TABLE 
+  `music-artist-411616.combined.emerging_genre` 
+ADD 
+  COLUMN classification STRING;
 ```
 ```sql
 -- update classification to generic genres
 -- first test
-UPDATE `music-artist-411616.combined.emerging_genre`
-SET classification = 'pop'
-WHERE genre IN ('pop','dance pop')
+UPDATE 
+  `music-artist-411616.combined.emerging_genre` 
+SET 
+  classification = 'pop' 
+WHERE 
+  genre IN ('pop', 'dance pop')
+
 ```
 
 success
@@ -429,14 +491,25 @@ move on to the rest, list provided [here](https://github.com/JLeData/music-genre
 
 ```sql
 -- update pop
-UPDATE `music-artist-411616.combined.emerging_genre`
-SET classification = 'pop'
-WHERE genre IN ('baroque pop','canadian pop','bedroom pop','folk-pop','australian pop',
-        'classic bollywood','acoustic pop','clasic pakistani pop','la pop','gauze pop',
-        'social media pop','gen z singer-songwriter','irish singer-song-writer','nyc pop',
-        'inide pop','candy pop','chill pop', 'irish pop','nz pop','experimental pop',
-        'modern alternative pop','latin pop','german pop','chinese pop','belgian pop',
-        'bubblegum pop','bollywood','hawaiian','girl group','new wave pop')
+UPDATE 
+  `music-artist-411616.combined.emerging_genre` 
+SET 
+  classification = 'pop' 
+WHERE 
+  genre IN (
+    'baroque pop', 'canadian pop', 'bedroom pop', 
+    'folk-pop', 'australian pop', 'classic bollywood', 
+    'acoustic pop', 'clasic pakistani pop', 
+    'la pop', 'gauze pop', 'social media pop', 
+    'gen z singer-songwriter', 'irish singer-song-writer', 
+    'nyc pop', 'inide pop', 'candy pop', 
+    'chill pop', 'irish pop', 'nz pop', 
+    'experimental pop', 'modern alternative pop', 
+    'latin pop', 'german pop', 'chinese pop', 
+    'belgian pop', 'bubblegum pop', 
+    'bollywood', 'hawaiian', 'girl group', 
+    'new wave pop'
+  );
 ```
 
 will look back to see if any null values exist and re apply query.
@@ -447,66 +520,125 @@ will change the broader classifications and go back for the smaller ones.
 
 ```sql
 -- update rock
-UPDATE `music-artist-411616.combined.emerging_genre`
-SET classification = 'rock'
-WHERE genre IN ('alt z','alternative metal','modern alternative rock','modern rock',
-      'album rock','classic rock','piano rock','australian rock','alternative rock','grunge',
-      'indie rock','glam metal','garage rock','permanant wave','jazz rock','blues rock',
-      'plugg','lilith','new wave pop','dance rock','celectic rock','classsical rock',
-      'british indie rock','melbourne bounce international','hard rock');
+UPDATE 
+  `music-artist-411616.combined.emerging_genre` 
+SET 
+  classification = 'rock' 
+WHERE 
+  genre IN (
+    'alt z', 'alternative metal', 'modern alternative rock', 
+    'modern rock', 'album rock', 'classic rock', 
+    'piano rock', 'australian rock', 
+    'alternative rock', 'grunge', 'indie rock', 
+    'glam metal', 'garage rock', 'permanant wave', 
+    'jazz rock', 'blues rock', 'plugg', 
+    'lilith', 'new wave pop', 'dance rock', 
+    'celectic rock', 'classsical rock', 
+    'british indie rock', 'melbourne bounce international', 
+    'hard rock'
+  );
 ```
 ```sql
 -- update edm
-UPDATE `music-artist-411616.combined.emerging_genre`
-SET classification = 'edm'
-WHERE genre IN ('brostep','electropop','indietronica','electro house','australian dance',
-      'dutch edm','eurodance','complextro','german dance','belgian dance','chicago house',
-      'downtempo','brazilian bass','dancefloor dnb','bubblegum dance',
-      'melbourne bounce international','electronic','minimal tech house','belgian edm',
-      'nordic house','big room')
+UPDATE 
+  `music-artist-411616.combined.emerging_genre` 
+SET 
+  classification = 'edm' 
+WHERE 
+  genre IN (
+    'brostep', 'electropop', 'indietronica', 
+    'electro house', 'australian dance', 
+    'dutch edm', 'eurodance', 'complextro', 
+    'german dance', 'belgian dance', 
+    'chicago house', 'downtempo', 'brazilian bass', 
+    'dancefloor dnb', 'bubblegum dance', 
+    'melbourne bounce international', 
+    'electronic', 'minimal tech house', 
+    'belgian edm', 'nordic house', 'big room'
+  );
 ```
 ```sql
 -- update hip-hop/rap
-UPDATE `music-artist-411616.combined.emerging_genre`
-SET classification = 'hip-hop/rap'
-WHERE genre IN ('chicago rap','emo rap','melodic rap','hip hop','pop rap','atl hip hop',
-      'desi hip hop','dfw rap','canadian hip hop','french shoegaze','australian hip hop',
-      'indie pop rap','hip pop','drift phonk','conscious hip hop','punjabi hip hop',
-      'reggaeton','metropopolis','ohio hip hop','latin hip hop','brooklyn drill',
-      'canadian latin','alternative hip hop','deep underground hip hop','chill phonk',
-      'melodic drill','memphis hip hop','aesthetic rap','hawaiian hip hop',
-      'phonk brasileiro','indie pop rap','pluggnb');
+UPDATE 
+  `music-artist-411616.combined.emerging_genre` 
+SET 
+  classification = 'hip-hop/rap' 
+WHERE 
+  genre IN (
+    'chicago rap', 'emo rap', 'melodic rap', 
+    'hip hop', 'pop rap', 'atl hip hop', 
+    'desi hip hop', 'dfw rap', 'canadian hip hop', 
+    'french shoegaze', 'australian hip hop', 
+    'indie pop rap', 'hip pop', 'drift phonk', 
+    'conscious hip hop', 'punjabi hip hop', 
+    'reggaeton', 'metropopolis', 'ohio hip hop', 
+    'latin hip hop', 'brooklyn drill', 
+    'canadian latin', 'alternative hip hop', 
+    'deep underground hip hop', 'chill phonk', 
+    'melodic drill', 'memphis hip hop', 
+    'aesthetic rap', 'hawaiian hip hop', 
+    'phonk brasileiro', 'indie pop rap', 
+    'pluggnb'
+  );
+
 ```
 ```sql
 --update r&b/soul
-UPDATE `music-artist-411616.combined.emerging_genre`
-SET classification = 'r&b/soul'
-WHERE genre IN ('bedroom soul','canadian contemporary r&b','r&b','alternative r&b',
-      'chill r&b','indonesian r&b','neo soul','british soul','soul jazz');
+UPDATE 
+  `music-artist-411616.combined.emerging_genre` 
+SET 
+  classification = 'r&b/soul' 
+WHERE 
+  genre IN (
+    'bedroom soul', 'canadian contemporary r&b', 
+    'r&b', 'alternative r&b', 'chill r&b', 
+    'indonesian r&b', 'neo soul', 'british soul', 
+    'soul jazz'
+  );
 ```
 ```sql
 -- update classical
-UPDATE `music-artist-411616.combined.emerging_genre`
-SET classification = 'classical'
-WHERE genre IN ('classical','art pop','british orchestra');
+UPDATE 
+  `music-artist-411616.combined.emerging_genre` 
+SET 
+  classification = 'classical' 
+WHERE 
+  genre IN (
+    'classical', 'art pop', 'british orchestra'
+  );
+
 ```
 ```sql
 -- update lo-fi/chill
-UPDATE `music-artist-411616.combined.emerging_genre`
-SET classification = 'lo-fi/chill'
-WHERE genre IN ('sad lo-fi','lo-fi chill','ambient worship');
+UPDATE 
+  `music-artist-411616.combined.emerging_genre` 
+SET 
+  classification = 'lo-fi/chill' 
+WHERE 
+  genre IN (
+    'sad lo-fi', 'lo-fi chill', 'ambient worship'
+  );
 ```
 ```sql
 -- update anime
-UPDATE `music-artist-411616.combined.emerging_genre`
-SET classification = 'anime'
-WHERE genre IN ('pov: indie','anime','otacore');
+UPDATE 
+  `music-artist-411616.combined.emerging_genre` 
+SET 
+  classification = 'anime' 
+WHERE 
+  genre IN ('pov: indie', 'anime', 'otacore');
 ```
 ```sql
 --update other
-UPDATE `music-artist-411616.combined.emerging_genre`
-SET classification = 'other'
-WHERE genre IN ('escape room','broadway','movie tunes','weirdcore','chutney');
+UPDATE 
+  `music-artist-411616.combined.emerging_genre` 
+SET 
+  classification = 'other' 
+WHERE 
+  genre IN (
+    'escape room', 'broadway', 'movie tunes', 
+    'weirdcore', 'chutney'
+  );
 ```
 NOTE:
 
@@ -520,9 +652,8 @@ NOTE:
 
 ```sql
 -- decided to delete popular_genre_analysis as emerging genre contains enough data to use
-ALTER TABLE music-artist-411616.combined.emerging_genre
-RENAME TO genre_assessment
--- renamed table
+ALTER TABLE 
+  music - artist - 411616.combined.emerging_genre RENAME TO genre_assessment -- renamed table
 ```
 Not all fields were utilized in the end, datasets picked are sufficient for analysis
 
@@ -534,22 +665,21 @@ Added another sql document for the purpose of creating visuals
 
 ```sql
 -- This is to better create visuals for the average user listeners per classification/genre
-CREATE TABLE music-artist-411616.combined.genre_artist_assessment AS
-SELECT DISTINCT three.artist_table_1,
-       three.listener_fans,
-       daily_streams,
-       three.daily_trend,
-       streams_by_artist,
-       peak,
-       peak_listeners,
-       three.genre,
-       three.classification
-FROM music-artist-411616.spotify.most_streamed_artists AS two
-JOIN music-artist-411616.spotify.spotify_song_attributes AS four
-ON two.artist_table_2 = four.artist_table_4
-JOIN music-artist-411616.spotify.monthly_listeners AS one
-ON four.artist_table_4 = one.artist_table_1
-JOIN music-artist-411616.combined.genre_assessment AS three
-ON one.artist_table_1 = three.artist_table_1;
+CREATE TABLE music - artist - 411616.combined.genre_artist_assessment AS 
+SELECT 
+  DISTINCT three.artist_table_1, 
+  three.listener_fans, 
+  daily_streams, 
+  three.daily_trend, 
+  streams_by_artist, 
+  peak, 
+  peak_listeners, 
+  three.genre, 
+  three.classification 
+FROM 
+  music - artist - 411616.spotify.most_streamed_artists AS two 
+  JOIN music - artist - 411616.spotify.spotify_song_attributes AS four ON two.artist_table_2 = four.artist_table_4 
+  JOIN music - artist - 411616.spotify.monthly_listeners AS one ON four.artist_table_4 = one.artist_table_1 
+  JOIN music - artist - 411616.combined.genre_assessment AS three ON one.artist_table_1 = three.artist_table_1;
 ```
 
